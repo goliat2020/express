@@ -13,7 +13,7 @@ const server = http.createServer((req, res) => {
 
         apiRes.on('end', () => {
             res.writeHead(200, { 'Content-Type': 'application/json' });
-            res.end(data);
+            res.send(data);
         });
 
     }).on('error', (err) => {
